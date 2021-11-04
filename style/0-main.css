@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  --primary-color-main: rgb(0, 112, 82);
+  --secondary-color-dark:rgb(57, 70, 86);
+  --secondary-color-dark-transparent:rgba(57, 70, 86, 0.85);
+  --secondary-color-main: rgba(205, 208, 200, 0.36);
+  --secondary-color-light: rgb(230, 230, 250);
+
+  --spacing-2: 12px;
+  --spacing-3: 1rem;
+  --spacing-4: 2rem;
+  --spacing-5: 3rem;
+
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--secondary-color-main);
+}
+
+#copyright {
+  background-color: var(--secondary-color-dark);
+  color: var(--secondary-color-light);
+  text-align: center;
+  padding: var(--spacing-2);
+  font-size: 0.75rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  text-transform: full-width;
+}
+
+section {
+  background-color: var(--secondary-color-main);
+}
+
+section > h1 {
+  text-align: center;
+  margin: 0;
+  padding: var(--spacing-4) var(--spacing-3) var(--spacing-3) var(--spacing-3);
+  color: var(--secondary-color-dark);
+}
+
+a {
+  color: var(--secondary-color-light);
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: var(--secondary-color-dark-transparent);
+}
+
+.button {
+  transition: all 1s ease-out;
+  padding: 8px;
+  border: 1px solid var(--secondary-color-light);
+}
+
+.button:hover {
+  background-color: var(--secondary-color-light);
+}
+
+.button.primary:hover {
+  background-color: var(--primary-color-main);
+  color: var(--secondary-color-light);
+}
+
+.divider {
+  width: 40%;
+  color: var(--primary-color-main);
+}
+
+.subdivider {
+  width: 20%;
+  color: var(--primary-color-main);
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .divider {
+    width: 90%;
+  }
+
+  .subdivider {
+    width: 70%;
+  }
+}

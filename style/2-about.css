@@ -1,0 +1,27 @@
+#about {
+    background-color: var(--secondary-color-dark-transparent);
+    color: var(--secondary-color-light);
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-5);
+}
+
+#about img {
+    border-radius: 50%;
+    height: 200px;
+}
+
+#about .block {
+    padding: var(--spacing-4);
+}
+
+@media (max-width: 600px) {
+    #about {
+        flex-direction: column;
+        padding: var(--spacing-4);
+    }
+
+    #about .block {
+        padding: var(--spacing-2);
+    }
+}

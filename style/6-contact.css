@@ -1,0 +1,25 @@
+#contact {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    background-color: var(--secondary-color-dark); 
+    padding: var(--spacing-3);
+}
+
+#contact > .item {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding: var(--spacing-2);
+}
+
+#contact > .item > a {
+    color: var(--secondary-color-light); 
+    margin: 8px;
+}
+
+@media (max-width: 600px) {
+    #contact {
+        flex-direction: column;
+    }
+}

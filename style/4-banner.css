@@ -1,0 +1,8 @@
+#banner {
+    background-image: url('../assets/formation.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: var(--secondary-color-dark);
+    padding: var(--spacing-4) var(--spacing-5);
+}

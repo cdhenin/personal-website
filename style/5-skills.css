@@ -1,0 +1,28 @@
+#skills > .content {
+    padding: var(--spacing-3); 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+#skills > .content > .block {
+    padding: 1rem;
+    margin: var(--spacing-3);
+    width: 25%;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+}
+#skills > .content > .block > h3 {
+    text-transform: uppercase;
+}
+
+#skills > .content > .block > img {
+    height: 20px;
+}
+
+@media (max-width: 600px) {
+    #skills > .content > .block {
+        width: 100%;
+    }
+}
