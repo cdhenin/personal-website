@@ -22,3 +22,13 @@
 #skills > .content .row .block > img {
     height: 20px;
 }
+
+@media (max-width: 600px) {
+    #skills > .content {
+        padding: 1rem;
+    }
+    
+    #skills > .content .row .block {
+        width: 100%;
+    }
+}
