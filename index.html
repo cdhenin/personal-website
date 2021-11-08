@@ -27,7 +27,7 @@
                     </g>
                   </svg> 
             </a>
-            <h1><a href="#home">CLAIRE DHENIN</a></h1>
+            <h1><a href="#home">CLAIRE DHÉNIN</a></h1>
             <ul>
                 <li><a href="#about">À propos de moi</a></li>
                 <li><a href="#experience">Mon parcours</a></li>
@@ -37,10 +37,12 @@
         </nav>
         <section id="home">
             <div class="block">
-                <h2>CLAIRE DHENIN</h2>
-                <p>Développeuse Full-Stack - Free-lance</p>
-                <a class="button" href="#experience">Mon parcours</a>
-                <a class="button primary" href="#contact">Me contacter</a>
+                <h2>CLAIRE DHÉNIN</h2>
+                <p>Développeuse Full-Stack Free-lance</p>
+                <div class="buttons">
+                    <a class="button" href="#about">À propos de moi</a>
+                    <a class="button primary" href="#contact">Me contacter</a>
+                </div>
             </div>
         </section>
         <section id="about">
@@ -53,9 +55,8 @@
             </div>
         </section>
         <section id="experience">
-            <h1>Mon Parcours</h1>
+            <h1>MON PARCOURS</h1>
             <hr  class="divider"/>
-            <hr  class="subdivider"/>
             <div class="timeline">
                 <div class="container right">
                     <div class="date">Juillet 2019 – Juillet 2021 </div>
@@ -141,9 +142,8 @@
                 <h2>INGÉNIEURE DE L’ÉCOLE CENTRALE DE LILLE IG2I</h2>
                 <h3>Diplômée en juin 2017</h3>
             </div>
-            <h1>Mes Compétences</h1>
+            <h1>MES COMPÉTENCES</h1>
             <hr  class="divider"/>
-            <hr  class="subdivider"/>
             <div class="content">
                 <div class="block">
                     <h3>Back-end</h3>
@@ -228,7 +228,7 @@
         });
 
         window.addEventListener('scroll', (event) => {
-            const fromTop = Math.round(window.scrollY);
+            const fromTop = Math.ceil(window.scrollY);
             if (fromTop === window.scrollMaxY) {
                 document.querySelector(`a[href='#contact']`).parentElement.classList.add('active');
                 document.querySelectorAll('nav ul li a:not([href=\'#contact\'])').forEach((section) => {
@@ -236,10 +236,9 @@
                 })
                 return;
             }
-            
             document.querySelectorAll('nav ul li a').forEach((link) => {
                 const section = document.querySelector(link.hash);
-                if (section.offsetTop < fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
                     return link.parentElement.classList.add('active');
                 } 
                 link.parentElement.classList.remove('active');

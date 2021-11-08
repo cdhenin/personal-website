@@ -9,15 +9,14 @@ nav {
   background-color: var(--secondary-color-dark);
   color: var(--secondary-color-light);
   z-index: 2;
-  height: 72px;
-  transition: opacity 1s ease-out;
-  transition: height 1s ease;
+  min-height: 72px;
+  transition: all 1s ease;
   opacity: 0.5;
 }
 
 nav.scroll {
   opacity: 1;
-  height: 52px;
+  min-height: 55px;
 }
 
 nav > h1 {

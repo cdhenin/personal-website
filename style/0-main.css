@@ -8,7 +8,7 @@ body {
   --primary-color-main: rgb(0, 112, 82);
   --secondary-color-dark:rgb(57, 70, 86);
   --secondary-color-dark-transparent:rgba(57, 70, 86, 0.85);
-  --secondary-color-main: rgba(205, 208, 200, 0.36);
+  --secondary-color-main: rgb(222, 222, 222);
   --secondary-color-light: rgb(230, 230, 250);
 
   --spacing-2: 12px;
@@ -33,6 +33,7 @@ h1 {
   text-align: center;
   margin: 0;
   text-transform: full-width;
+  font-weight: normal;
 }
 
 section {
@@ -59,34 +60,55 @@ a:hover, a:active {
   transition: all 1s ease-out;
   padding: 8px;
   border: 1px solid var(--secondary-color-light);
+  border-radius: 2px;
+  min-width: 150px;
+  margin-right: 6px;
+  margin-bottom: 8px;
 }
 
 .button:hover {
   background-color: var(--secondary-color-light);
 }
 
-.button.primary:hover {
+.button.primary {
   background-color: var(--primary-color-main);
   color: var(--secondary-color-light);
+}
+
+.button.primary:hover {
+  background-color: var(--secondary-color-light);
+  color: var(--secondary-color-dark);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 16px;
 }
 
 .divider {
   width: 40%;
   color: var(--primary-color-main);
+  position: relative;
 }
 
-.subdivider {
-  width: 20%;
-  color: var(--primary-color-main);
-  margin-bottom: 0;
+.divider::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: var(--secondary-color-dark);
+  display: inline-block;
+  border: 2px solid var(--primary-color-main);
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin: 0 0 0 -3px;
+  border-radius: 16px;
 }
 
 @media (max-width: 600px) {
   .divider {
     width: 90%;
-  }
-
-  .subdivider {
-    width: 70%;
   }
 }
