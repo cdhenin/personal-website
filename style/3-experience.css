@@ -131,7 +131,8 @@
 
 .container .content p {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  font-weight: 200;
 }
 
 .container .content h3 {

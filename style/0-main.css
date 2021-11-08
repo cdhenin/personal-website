@@ -5,12 +5,19 @@
 }
 
 @font-face {
-	font-family: "Aller Regular";
+	font-family: "Aller";
+  font-style: normal;
 	src: url('../assets/fonts/aller/Aller_Std_Rg.ttf');
 }
 
 @font-face {
-	font-family: "Aller Bold";
+	font-family: "Aller";
+  font-weight: 200;
+	src: url('../assets/fonts/aller/Aller_Std_Lt.ttf');
+}
+
+@font-face {
+	font-family: "Aller";
 	font-weight: bold;
 	src: url('../assets/fonts/aller/Aller_Std_Bd.ttf');
 }
@@ -32,7 +39,7 @@ body {
   --spacing-4: 2rem;
   --spacing-5: 3rem;
 
-  --main-font:  Aller Regular, GillSansRegular, "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+  --main-font:  Aller, GillSansRegular, "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
   --title-font: Satisfy, GillSansRegular, "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif; 
 
   margin: 0;
