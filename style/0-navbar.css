@@ -14,13 +14,9 @@ nav {
   opacity: 0.5;
 }
 
-nav.scroll {
+nav.scroll, nav:hover {
   opacity: 1;
-  min-height: 55px;
-}
-
-nav > h1 {
-  margin: 8px 0;
+  min-height: 53px;
 }
 
 nav > h1 a:hover {

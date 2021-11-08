@@ -28,14 +28,13 @@
     justify-content: center;
 }
 
-#home > .block h2 {
-    font-size: 2rem;
-    text-transform: full-width; 
+#home > .block h1 {
+    font-size: 3rem;
 }
 
 #home > .block p {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color-main);
-    margin: 8px 8px 16px 8px;
+    margin: var(--spacing-3);
 }
