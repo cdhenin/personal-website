@@ -1,23 +1,24 @@
 #skills > .content {
     display: flex; 
     justify-content: center; 
+    flex-direction: column;
     flex-wrap: wrap;
-    padding: 2rem 1rem;
+    padding: 2rem;
 }
 
-#skills > .content > .block {
+#skills > .content .row .block {
     padding: 1rem;
     padding-bottom: 2rem;
     margin: var(--spacing-2);
-    width: 335px;
+    width: 325px;
     background: white;
-    border-radius: 20px;
+    border-radius: 10px 20px;
     text-align: center;
 }
-#skills > .content > .block > h3 {
+#skills > .content .row .block > h3 {
     text-transform: uppercase;
 }
 
-#skills > .content > .block > img {
+#skills > .content .row .block > img {
     height: 20px;
 }

@@ -27,6 +27,10 @@
 	src: url('../assets/fonts/satisfy/Satisfy-Regular.ttf');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   --primary-color-main: rgb(0, 112, 82);
   --secondary-color-dark:rgb(57, 70, 86);
@@ -132,6 +136,12 @@ a:hover, a:active {
   left: 50%;
   margin: 0 0 0 -3px;
   border-radius: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 600px) {
