@@ -17,7 +17,7 @@ body {
   --spacing-5: 3rem;
 
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: GillSansRegular, "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--secondary-color-main);
 }
 
@@ -26,7 +26,7 @@ body {
   color: var(--secondary-color-light);
   text-align: center;
   padding: var(--spacing-2);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 h1 {
@@ -38,6 +38,7 @@ h1 {
 
 section {
   background-color: var(--secondary-color-main);
+  padding: var(--spacing-4) var(--spacing-3);
 }
 
 section > h1 {
@@ -89,7 +90,7 @@ a:hover, a:active {
 
 .divider {
   width: 40%;
-  color: var(--primary-color-main);
+  border-color: var(--primary-color-main);
   position: relative;
 }
 

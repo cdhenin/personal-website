@@ -33,7 +33,11 @@ nav > ul {
   margin: 0;
   padding: 0;
 }
-  
+
+nav > ul li {
+  transition: all 0.5s ease-in-out;
+}
+
 nav > ul li:hover {
   background-color: var(--secondary-color-light);
   color: var(--secondary-color-dark);

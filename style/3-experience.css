@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 1rem 0;
 }
 
 .timeline::after {
@@ -11,7 +11,7 @@
   width: 2px;
   background: var(--primary-color-main);
   top: 0;
-  bottom: 0;
+  bottom: -4rem;
   left: 50%;
   margin-left: -1px;
 }
@@ -70,12 +70,20 @@
   display: inline-block;
   top: calc(50% - 8px);
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--primary-color-main);
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
+}
+
+.container.left .date.large {
+  right: calc(-275px - 26px);
+}
+
+.container.right .date.large {
+  left: calc(-275px - 26px);
 }
 
 .container.left .date {
@@ -85,7 +93,6 @@
 .container.right .date {
   left: -275px;
 }
-
 .container .icon {
   position: absolute;
   width: 40px;
@@ -116,14 +123,15 @@
 
 .container .content h2 {
   margin: 0 0 4px 0;
-  font-size: 18px;
+  font-size: 1.15rem;
   font-weight: normal;
   color: var(--primary-color-main);
+  text-transform: uppercase;
 }
 
 .container .content p {
   margin: 0;
-  font-size: 13px;
+  font-size: 0.875rem;
 }
 
 .container .content h3 {
