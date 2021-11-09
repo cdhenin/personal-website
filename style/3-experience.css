@@ -189,7 +189,9 @@
   }
 
   .container.left .date,
-  .container.right .date {
+  .container.right .date, 
+  .container.right .date.large,
+  .container.left .date.large {
     right: auto;
     left: calc(15px + 50px + 40px + 10px);
   }
