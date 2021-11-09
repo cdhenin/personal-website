@@ -70,9 +70,9 @@
   display: inline-block;
   top: calc(50% - 8px);
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  color: var(--primary-color-main);
+  color: var(--secondary-color-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
