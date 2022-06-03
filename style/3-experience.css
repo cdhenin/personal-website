@@ -5,6 +5,12 @@
   padding: 1rem 0;
 }
 
+@media (min-height: 680px) { 
+  .timeline {
+    width: 75%;
+  }
+}
+
 .timeline::after {
   content: '';
   position: absolute;
