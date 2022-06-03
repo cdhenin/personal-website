@@ -12,6 +12,7 @@
     margin: var(--spacing-2);
     width: 325px;
     background: white;
+    border: 2px dotted var(--secondary-color-dark);
     border-radius: 10px 20px;
     text-align: center;
 }
