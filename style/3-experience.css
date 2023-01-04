@@ -7,10 +7,10 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: var(--spacing-3) 0;
 }
 
-@media (min-width: 727px) { 
+@media (min-width: 1024px) { 
   .timeline {
     width: 75%;
   }
@@ -20,7 +20,7 @@
   content: '';
   position: absolute;
   width: 2px;
-  background: var(--primary-color-main);
+  border-left: 2px dashed var(--primary-color-main);
   top: -5px;
   bottom: -4rem;
   left: 50%;
@@ -31,16 +31,18 @@
   position: relative;
   background: inherit;
   width: 50%;
+
+  --icon-size: 40px;
+  --container-padding: var(--spacing-3);
+  padding: var(--container-padding);
 }
 
 .container.left {
-  padding: 20px 15px 20px 0px;
   left: 0;
   text-align: end;
 }
 
 .container.right {
-  padding: 20px 0px 20px 15px;
   left: 50%;
 }
 
@@ -68,7 +70,7 @@
   height: 2px;
   top: calc(50% - 1px);
   right: 6px;
-  background: var(--primary-color-main);
+  border-top: 2px dashed var(--primary-color-main);
   z-index: 1;
 }
 
@@ -106,11 +108,11 @@
 }
 .container .icon {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: var(--icon-size);
+  height: var(--icon-size);
   top: calc(50% - 20px);
   border: 2px solid var(--primary-color-main);
-  border-radius: 40px;
+  border-radius: var(--icon-size);
   object-fit: contain;
   background-color: white;
 }
@@ -124,12 +126,18 @@
 }
 
 .container .content {
-  padding: 20px 90px 20px 20px;
   position: relative;
+  padding: var(--spacing-3);
+  border-right: 2px dotted var(--primary-color-main);
+  margin-right: 90px;
+  border-radius: 10px;
 }
 
 .container.right .content {
-  padding: 20px 20px 20px 90px;
+  margin-left: 90px;
+  margin-right: 0;
+  border-left: 2px dotted var(--primary-color-main);
+  border-right: 0;
 }
 
 .container .content h2 {
@@ -156,10 +164,17 @@
     left: 20px;
   }
 
+  .container .content, .container.right .content {
+    border: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
   .container {
+    --container-position: 15px;
+
     width: 100%;
-    padding-left: 45px;
-    padding-right: 20px;
+    padding-left: calc(var(--container-padding) + var(--container-position) + var(--icon-size) + 10px)
   }
 
   .container::after {
@@ -180,9 +195,8 @@
   }
 
   .container.left {
-    padding: 20px 0px 20px 15px;
     text-align: left;
-}
+  }
 
   .container.right {
     left: 0%;
@@ -190,7 +204,7 @@
 
   .container.left::after, 
   .container.right::after {
-    left: 50px;
+    left: var(--container-position);
   }
 
   .container.left::before,
@@ -204,17 +218,13 @@
   .container.right .date.large,
   .container.left .date.large {
     right: auto;
-    left: calc(15px + 50px + 40px + 10px);
+    left: calc(var(--container-padding) + var(--container-position) + var(--icon-size) + 10px);
   }
 
   .container.left .icon,
   .container.right .icon {
     right: auto;
-    left: 65px;
+    left: calc(var(--container-padding) + var(--container-position));
   }
 
-  .container.left .content,
-  .container.right .content {
-    padding: 20px 20px 20px 70px;
-  }
 }

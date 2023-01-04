@@ -5,26 +5,13 @@
 }
 
 @font-face {
-	font-family: "Aller";
-  font-style: normal;
-	src: url('../assets/fonts/aller/Aller_Std_Rg.ttf');
-}
-
-@font-face {
-	font-family: "Aller";
-  font-weight: 200;
-	src: url('../assets/fonts/aller/Aller_Std_Lt.ttf');
-}
-
-@font-face {
-	font-family: "Aller";
-	font-weight: bold;
-	src: url('../assets/fonts/aller/Aller_Std_Bd.ttf');
-}
-
-@font-face {
 	font-family: "Satisfy";
 	src: url('../assets/fonts/satisfy/Satisfy-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Eyman";
+  src: url('../assets/fonts/eymen_pro/EymenPro-Light.otf');
 }
 
 html {
@@ -43,7 +30,7 @@ body {
   --spacing-4: 2rem;
   --spacing-5: 3rem;
 
-  --main-font:  Aller, GillSansRegular, "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+  --main-font:  Eyman, GillSansRegular, "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
   --title-font: Satisfy, GillSansRegular, "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif; 
 
   margin: 0;
@@ -58,6 +45,12 @@ body {
   padding: var(--spacing-2);
   font-size: 0.875rem;
 }
+
+#copyright > a:hover {
+  color: var(--secondary-color-light);
+  font-weight: 600;
+}
+
 
 h1 {
   font-family: var(--title-font);

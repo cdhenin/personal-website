@@ -11,6 +11,8 @@
     border-radius: 50%;
     height: 200px;
     border: 2px dotted;
+    width: 200px;
+    object-fit: cover;
 }
 
 #about .block {
