@@ -1,7 +1,7 @@
-# Source code of [claire.dhenin.net](claire.dhenin.net)
+# Mon site professionel
 
-Source code of my personal website. 
+Code source de [mon site professionel personnel](https://claire.dhenin.net). 
 
-Static site using pure CSS, HTML and JavaScript
+Site statique en CSS pure, HTML and JavaScript.
 
 ![og-image](assets/og-image.png)
