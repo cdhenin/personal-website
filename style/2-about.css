@@ -1,33 +1,107 @@
-#about {
-    background-color: var(--secondary-color-dark-transparent);
+.about {
+    background-color: var(--primary-color-main);
     color: var(--secondary-color-light);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: var(--spacing-5);
+    position: relative;
+    min-height: unset;
 }
 
-#about img {
+.about img {
     border-radius: 50%;
     height: 200px;
     border: 2px dotted;
     width: 200px;
     object-fit: cover;
+    position: absolute;
+    top: -100px;
+    left: 10%;
 }
 
-#about .block {
-    padding: var(--spacing-5);
-    max-width: 70%;
+.about .anchor {
+    position: absolute;
+    top: calc(-1 * var(--navbar-height) - 100px);
+}
+
+.about .block {
+    margin-left: calc(10% + 200px + var(--spacing-2));
+    padding: var(--spacing-3);
+    max-width: 50%;
+    background-color: var(--secondary-color-dark);
+}
+
+.about .link {
+    color: var(--secondary-color-light);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+.about .arrow-scroll {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2rem;
+    animation: down 1.5s infinite;
+    -webkit-animation: down 1.5s infinite;
+}
+
+.about .arrow-scroll::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid var(--secondary-color-light);
+    border-bottom: 2px solid var(--secondary-color-light);
+    transform: rotate(-45deg);
+}
+
+@keyframes down {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translateY(15px);
+    }
+
+    40% {
+        transform: translate(0);
+    }
+}
+
+@-webkit-keyframes down {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translateY(15px);
+    }
+
+    40% {
+        transform: translate(0);
+    }
 }
 
 @media (max-width: 600px) {
-    #about {
+    .about {
         flex-direction: column;
         padding: var(--spacing-4);
     }
 
-    #about .block {
+    .about .block {
         padding: var(--spacing-2);
         max-width: none;
+        margin-left: 0;
+        margin-top: calc(75px - 2rem);
     }
 }

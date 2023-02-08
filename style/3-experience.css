@@ -1,16 +1,11 @@
-#experience {
-  background-image: repeating-linear-gradient(223deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 0px, transparent 2px);
-  background-size: 20px;
-}
-
 .timeline {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: var(--spacing-3) 0;
+  padding: var(--spacing-5) 0;
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
   .timeline {
     width: 75%;
   }
@@ -22,9 +17,13 @@
   width: 2px;
   border-left: 2px dashed var(--primary-color-main);
   top: -5px;
-  bottom: -4rem;
+  bottom: 0rem;
   left: 50%;
   margin-left: 1px;
+}
+
+section.experience {
+  padding: 0;
 }
 
 .container {
@@ -106,6 +105,7 @@
 .container.right .date {
   left: -275px;
 }
+
 .container .icon {
   position: absolute;
   width: var(--icon-size);
@@ -115,6 +115,11 @@
   border-radius: var(--icon-size);
   object-fit: contain;
   background-color: white;
+  transition: all 1s ease;
+}
+
+.container .icon:hover {
+  transform: scale(1.2);
 }
 
 .container.left .icon {
@@ -160,11 +165,16 @@
 }
 
 @media (max-width: 600px) {
+  .container.reveal.left:not(.active) {
+    transform: translateX(150px);
+  }
+
   .timeline::after {
     left: 20px;
   }
 
-  .container .content, .container.right .content {
+  .container .content,
+  .container.right .content {
     border: none;
     margin: 0;
     padding-left: 0;
@@ -180,15 +190,15 @@
   .container::after {
     top: calc(5% - 8px);
   }
-  
+
   .container::before {
     top: calc(5% - 1px);
     width: 30px;
   }
-  
+
   .container .date {
     top: calc(5% - 8px);
-  }  
+  }
 
   .container .icon {
     top: calc(5% - 20px);
@@ -202,7 +212,7 @@
     left: 0%;
   }
 
-  .container.left::after, 
+  .container.left::after,
   .container.right::after {
     left: var(--container-position);
   }
@@ -214,7 +224,7 @@
   }
 
   .container.left .date,
-  .container.right .date, 
+  .container.right .date,
   .container.right .date.large,
   .container.left .date.large {
     right: auto;

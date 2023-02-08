@@ -7,4 +7,14 @@
     padding: var(--spacing-4) var(--spacing-5);
     border-top: 1px solid var(--primary-color-main);
     border-bottom: 1px solid var(--secondary-color-dark);
+    min-height: 250px;
+}
+
+#banner .titles {
+    background-color: white;
+    padding: var(--spacing-4) var(--spacing-4);
+}
+
+#banner .titles h3, #banner .titles h2 {
+    margin: 0;
 }

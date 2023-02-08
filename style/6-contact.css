@@ -1,25 +1,25 @@
-#contact {
+.contact {
     display: flex;
     flex-direction: column;
     background-color: var(--secondary-color-dark); 
     padding: var(--spacing-3);
 }
 
-#contact > h1 {
+.contact > h2 {
     color: var(--secondary-color-light);
 }
 
-#contact > .divider {
+.contact > .divider {
     color: var(--secondary-color-light);
 }
 
-#contact > .items {
+.contact > .items {
     display: flex; 
     flex-direction: column;
     align-items: center; 
 }
 
-#contact > .items > .item {
+.contact > .items > .item {
     display: flex; 
     flex-direction: column; 
     align-items: center;
@@ -27,18 +27,18 @@
     gap: var(--spacing-2);
 }
 
-#contact > .items > a.item {
+.contact > .items > a.item {
     color: var(--secondary-color-light); 
     margin: 8px;
 }
 
-#contact > .items > a.item:hover {
+.contact > .items > a.item:hover {
     color: var(--secondary-color-light); 
     font-weight: 600;
 }
 
 @media (max-width: 600px) {
-    #contact {
+    .contact {
         flex-direction: column;
     }
 }
