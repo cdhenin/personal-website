@@ -6,15 +6,17 @@
     <title>Claire Dhénin - Développeuse Full-Stack - Free-lance</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description"
-        content="Diplômée de la formation IG2I du groupe Centrale Lille, je suis développeuse Full-Stack depuis 2017. Après plusieurs expériences formatrices en tant que salariée de différentes start-ups et PME, je me suis lancé dans l'aventure free-lance pour me construire une expertise de façon indépendante. Je suis disponible pour vos projets en contrat free-lance. Je suis en télé-travail depuis Ornon (Isère) et je suis mobile ponctuellement sur Grenoble, Lyon et alentours.">
+        content="Diplômée de la formation IG2I du groupe Centrale Lille, je suis développeuse Full-Stack depuis 2017. Je me suis lancé dans l'aventure free-lance depuis 2021, je suis disponible pour vos projets en contrat free-lance. Je suis en télé-travail depuis Ornon (Isère) et je suis mobile ponctuellement sur Grenoble, Lyon et alentours.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta property="og:url" content="https://claire.dhenin.net" />
+    <!-- <meta property="og:url" content="https://claire.dhenin.net" /> -->
     <meta property="og:title" content="Claire Dhénin - Développeuse Full-Stack - Free-lance" />
     <meta property="og:description"
         content=" Diplômée de la formation IG2I du groupe Centrale Lille, je suis développeuse Full-Stack depuis 2017. Après plusieurs expériences formatrices en tant que salariée de différentes start-ups et PME, je me suis lancé dans l'aventure free-lance pour me construire une expertise de façon indépendante. Je suis disponible pour vos projets en contrat free-lance. Je suis en télé-travail depuis Ornon (Isère) et je suis mobile ponctuellement sur Grenoble, Lyon et alentours." />
-    <meta property="og:image" content="https://claire.dhenin.net/assets/og-image.png" />
+    <!-- <meta property="og:image" content="https://claire.dhenin.net/assets/og-image.png" /> -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src https:">
 
     <link rel="stylesheet" type="text/css" href="style/0-main.css">
     <link rel="stylesheet" type="text/css" href="style/0-navbar.css">
@@ -29,15 +31,15 @@
 <body>
     <main id="root">
         <nav>
-            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                <svg height="20" width="20">
+            <button class="icon" id="toggleMenuButton" aria-label="Ouvrir le menu mobile">
+                <svg height="20" width="20" aria-hidden="true">
                     <g fill="rgb(230, 230, 250)" stroke="rgb(230, 230, 250)" stroke-width="2">
                         <path stroke-linecap="round" d="M3 5 l13 0"></path>
                         <path stroke-linecap="round" d="M3 10 l13 0" />
                         <path stroke-linecap="round" d="M3 15 l13 0" />
                     </g>
                 </svg>
-            </a>
+            </button>
             <h1><a class="link" href="#home">Claire Dhénin</a></h1>
             <ul>
                 <li><a class="link" href="#about">À propos de moi</a></li>
@@ -87,8 +89,9 @@
             <div class="timeline">
                 <div class="container left reveal">
                     <div class="date">Novembre 2021 – Juillet 2022</div>
-                    <a href="https://www.lyanne.fr" target="_blank" rel="noopener noreferrer"><img alt="lyanne logo"
-                            class="icon" src="./assets/logo/compagny/lyanne.jpeg" /></a>
+                    <a href="https://www.lyanne.fr" target="_blank" rel="noopener noreferrer">
+                        <img alt="lyanne logo" class="icon" src="./assets/logo/compagny/lyanne.jpeg" />
+                    </a>
                     <div class="content">
                         <h2>DÉVELOPPEUSE FULL-STACK Free-lance</h2>
                         <h3><a class="link" href="https://www.lyanne.fr" target="_blank"
@@ -149,7 +152,7 @@
                     </div>
                 </div>
                 <div class="container left reveal">
-                    <div class="date"> Février 2017 – Juillet 2017 </div>
+                    <div class="date">Février 2017 – Juillet 2017 </div>
                     <a href="https://www.jerevedunemaison.com/" target="_blank" rel="noopener noreferrer">
                         <img alt="jerevedunemaison logo" class="icon"
                             src="assets/logo/compagny/jerevedunemaison.jpeg" />
@@ -288,77 +291,13 @@
             </div>
         </section>
         <div id="copyright">
-            Tous droits réservés © Claire DHÉNIN |
-            <script>document.write(new Date().getFullYear())</script>
-            - <a class="link" href="mentionslegales.html">Mentions légales</a>
+            Tous droits réservés © Claire DHÉNIN | <span id="copyright-date"></span> - <a class="link" href="mentionslegales.html">Mentions légales</a>
             <div>
     </main>
+
+    <script src="scripts/menu.js"></script> 
+    <script src="scripts/reveal.js"></script> 
+    <script src="scripts/copyright.js"></script> 
 </body>
-
-<script>
-    const NAVBAR_HEIGHT = 62;
-
-    function toggleMenu() {
-        document.querySelector("nav > ul").classList.toggle('visible');
-        document.querySelector('nav').classList.add('scroll');
-    }
-
-    function toggleNavbarScrollClass() {
-        const nav = document.querySelector('nav');
-
-        (window.scrollY >= NAVBAR_HEIGHT) ? nav.classList.add('scroll') : nav.classList.remove('scroll');
-    }
-
-    function setActiveClassOnMenuItems() {
-        const fromTop = Math.ceil(window.scrollY);
-        if (fromTop === window.scrollMaxY) {
-            document.querySelector(`a[href='#contact']`).parentElement.classList.add('active');
-            document.querySelectorAll('nav ul li a:not([href=\'#contact\'])').forEach((section) => {
-                section.parentElement.classList.remove('active')
-            })
-            return;
-        }
-        document.querySelectorAll('nav ul li a').forEach((link) => {
-            const anchor = document.querySelector(link.hash);
-            const section = anchor.offsetParent;
-            const visualOffset = parseInt(anchor.dataset.extraSpace || 0, 10) + NAVBAR_HEIGHT;
-            const currentPositionTop = fromTop + visualOffset;
-            const currentPositionBottom = section.offsetTop + section.offsetHeight - visualOffset;
-
-            if (section.offsetTop <= currentPositionTop && currentPositionBottom > fromTop) {
-                return link.parentElement.classList.add('active');
-            }
-            link.parentElement.classList.remove('active');
-        });
-    }
-
-    function hideMobileMenu() {
-        document.querySelector('nav > ul').classList.remove('visible');
-
-    }
-
-    function revealHiddenElements() {
-        document.querySelectorAll(".reveal").forEach((element) => {
-            const windowHeight = window.innerHeight;
-            const elementTop = element.getBoundingClientRect().top;
-            const elementVisible = 150;
-            if (elementTop < windowHeight - elementVisible) {
-                element.classList.add("active");
-            } else if (element.classList.contains('toggle')) {
-                element.classList.remove("active");
-            }
-        });
-
-    }
-
-    window.addEventListener('scroll', toggleNavbarScrollClass);
-    window.addEventListener('scroll', setActiveClassOnMenuItems);
-    window.addEventListener('scroll', hideMobileMenu);
-    window.addEventListener("scroll", revealHiddenElements);
-
-    // To check the scroll position on page load
-    revealHiddenElements();
-
-</script>
 
 </html>
