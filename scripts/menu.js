@@ -14,7 +14,9 @@ function toggleNavbarScrollClass() {
 function setActiveClassOnMenuItems() {
     const fromTop = Math.ceil(window.scrollY);
     if (fromTop >= window.scrollMaxY) {
-        document.querySelector(`a[href='#contact']`).parentElement.classList.add('active');
+        const contact = document.querySelector(`a[href='#contact']`)
+        if (!contact) { return; }
+        contact.parentElement.classList.add('active');
         document.querySelectorAll('nav ul li a:not([href=\'#contact\'])').forEach((section) => {
             section.parentElement.classList.remove('active')
         })
