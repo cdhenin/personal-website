@@ -6,12 +6,11 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--secondary-color-dark);
-  color: var(--secondary-color-light);
+  background-color: var(--secondary-color-main);
+  color: var(--primary-color-light);
   z-index: 2;
   min-height: 82px;
   transition: all 0.8s ease;
-  opacity: 0.5;
 }
 
 nav.scroll,
@@ -21,7 +20,13 @@ nav:hover {
 }
 
 nav>h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+nav>h1 i {
+  font-size: 2.2rem;
+  font-style: normal;
 }
 
 nav>h1 a:hover {
@@ -45,7 +50,7 @@ nav>ul li a.link {
   padding: var(--spacing-3);
   width: 100%;
   height: 100%;
-  color: var(--secondary-color-light);
+  color: var(--primary-color-light);
   transition: all 1s ease-out;
   display: flex;
   align-items: center;
@@ -71,7 +76,7 @@ nav .icon {
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
 
   nav,
   nav.scroll {
@@ -80,7 +85,12 @@ nav .icon {
   }
 
   nav>h1 {
+    font-size: 1.3rem;
+  }
+
+  nav>h1 i {
     font-size: 1.8rem;
+    font-style: normal;
   }
 
   nav .icon {

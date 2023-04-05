@@ -1,4 +1,4 @@
-const NAVBAR_HEIGHT = 62;
+const NAVBAR_HEIGHT = 82;
 
 function toggleMenu() {
     document.querySelector("nav > ul").classList.toggle('visible');
