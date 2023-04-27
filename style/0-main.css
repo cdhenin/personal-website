@@ -18,13 +18,6 @@
 
 @font-face {
   font-family: "Josefin_Sans";
-  src: url('../assets/fonts/Josefin_Sans/static/JosefinSans-Bold.ttf');
-  font-weight: bold;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Josefin_Sans";
   src: url('../assets/fonts/Josefin_Sans/static/JosefinSans-SemiBold.ttf');
   font-weight: 600;
   font-display: swap;
@@ -241,14 +234,35 @@ section.right {
   justify-content: center;
 }
 
-.parallax.bg-home {
-  background-image: url("../assets/home.jpg");
-
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .parallax.bg-home {
+    background-image: url("../assets/background/1200.jpg");
+  }
+  
+  .parallax.bg-bw {
+    background-image: url("../assets/background/1200-bw.jpg");
+  }  
 }
 
-.parallax.bg-bw {
-  background-image: url("../assets/home-bw.jpg");
+@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+  .parallax.bg-home {
+    background-image: url("../assets/background/1900.jpg");
+  }
+  
+  .parallax.bg-bw {
+    background-image: url("../assets/background/1900-bw.jpg");
+  }  
+}
 
+@media only screen and (min-width: 1900px) {
+  .parallax.bg-home {
+    background-image: url("../assets/background/home.jpg");
+  }
+  
+  .parallax.bg-bw {
+    background-image: url("../assets/background/home-bw.jpg");
+  }  
 }
 
 @media only screen and (max-device-width: 1366px) {
@@ -256,6 +270,7 @@ section.right {
     background-attachment: scroll;
   }
 }
+
 
 .reveal {
   position: relative;
