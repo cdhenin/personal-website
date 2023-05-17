@@ -1,0 +1,78 @@
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .parallax {
+        &.bg-home {
+            background-image: url("/assets/background/600.webp");
+        }
+
+        &.bg-bw {
+            background-image: url("/assets/background/600-bw.webp");
+        }
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .parallax {
+        &.bg-home {
+            background-image: url("/assets/background/1200.webp");
+        }
+
+        &.bg-bw {
+            background-image: url("/assets/background/1200-bw.webp");
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+    .parallax {
+        &.bg-home {
+            background-image: url("/assets/background/1900.webp");
+        }
+
+        &.bg-bw {
+            background-image: url("/assets/background/1900-bw.webp");
+        }
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .parallax {
+        &.bg-home {
+            background-image: url("/assets/background/home.jpg");
+        }
+
+        &.bg-bw {
+            background-image: url("/assets/background/home-bw.jpg");
+        }
+    }
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax-container {
+        background-attachment: scroll;
+    }
+}
+
+
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: 1s cubic-bezier(0.235, 0.615, 0.185, 0.995);
+
+    &.active {
+        opacity: 1;
+    }
+}
+
