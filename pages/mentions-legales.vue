@@ -1,71 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8" />
-    <title>Claire Dhénin - Mentions légales</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <meta name="description"
-        content="Diplômée de la formation IG2I du groupe Centrale Lille, je suis développeuse web (back et front) depuis 2017, en free-lance depuis 2021. Je suis en télé-travail depuis Ornon (Isère) et je suis mobile ponctuellement sur Grenoble, Lyon et alentours.">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" type="text/css" href="style/0-main.css">
-    <link rel="stylesheet" type="text/css" href="style/0-navbar.css">
-
-    <link rel="canonical" href="https://claire.dhenin.net/mentionslegales.html" />
-
-    <style>
-        #mentionslegales {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-            margin-top: 5rem;
-        }
-
-        #mentionslegales h2,
-        #mentionslegales h3,
-        #mentionslegales h4,
-        #mentionslegales h5 {
-            color: var(--primary-color-main);
-        }
-
-        #mentionslegales>.container a {
-            color: var(--secondary-color-main);
-        }
-
-        @media (min-width: 767px) {
-            #mentionslegales>.container {
-                width: 60%;
-            }
-
-        }
-    </style>
-</head>
-
-<body>
+<template>
     <main id="root">
-        <nav>
-            <button class="icon" id="toggleMenuButton" value="Ouvrir le menu mobile">
-                <svg height="20" width="20" role="img" aria-hidden="true">
-                    <g fill="rgb(230, 230, 250)" stroke="rgb(230, 230, 250)" stroke-width="2">
-                        <path stroke-linecap="round" d="M3 5 l13 0"></path>
-                        <path stroke-linecap="round" d="M3 10 l13 0" />
-                        <path stroke-linecap="round" d="M3 15 l13 0" />
-                    </g>
-                </svg>
-            </button>
-            <h1> <a class="link" href="/">
-                    <i>Claire Dhénin</i>
-                    <br />
-                    Développeuse Full-stack
-                </a></h1>
-            <ul>
-                <li><a class="link" href="/#about">À propos de moi</a></li>
-                <li><a class="link" href="/#experience">Mon parcours</a></li>
-                <li><a class="link" href="/#skills">Mes compétences</a></li>
-                <li><a class="link" href="/#contact">Contact</a></li>
-            </ul>
-        </nav>
         <section id="mentionslegales">
             <div class="container">
                 <h2>Mentions légales</h2>
@@ -159,9 +93,50 @@
             </div>
         </section>
     </main>
-</body>
+</template>
+  
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+    name: "MentionsLegalesPage",
+    head() {
+        return {
+            title: 'Claire Dhénin - Mentions légales',
+        }
+    },
+})
+</script>
+
+<style lang="scss" scoped>
+#mentionslegales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 5rem;
+
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: var(--primary-color-main);
+    }
+
+    >.container a {
+        a {
+            color: var(--secondary-color-main);
+        }
+    }
+}
 
 
-<script src="scripts/menu.js"></script>
-
-</html>
+@media (min-width: 767px) {
+    #mentionslegales {
+        >.container {
+            width: 60%;
+        }
+    }
+}
+</style>
+  
