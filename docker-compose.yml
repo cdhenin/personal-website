@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  server:
+    image: jakejarvis/hugo-extended:latest
+    ports:
+      - 1313:1313
+    volumes:
+      - ./:/src
+    command: server --disableFastRender --bind 0.0.0.0
