@@ -1,6 +1,0 @@
-baseURL = "https://claire.dhenin.net"
-languageCode = "fr-fr"
-title = "Claire Dhénin - Développeuse web Free-lance"
-enableRobotsTXT = true
-defaultContentLanguage = 'fr'
-disableKinds = ["taxonomy", "taxonomyTerm"]

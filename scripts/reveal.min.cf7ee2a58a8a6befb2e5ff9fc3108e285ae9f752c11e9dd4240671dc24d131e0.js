@@ -1,0 +1,1 @@
+const OFFSET=150;function revealHiddenElements(){document.querySelectorAll(".reveal").forEach(e=>{const t=window.innerHeight,n=e.getBoundingClientRect().top,s=OFFSET;n<t-s?e.classList.add("active"):e.classList.contains("toggle")&&e.classList.remove("active")})}window.addEventListener("scroll",revealHiddenElements),revealHiddenElements()

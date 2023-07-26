@@ -1,0 +1,1 @@
+.contact .screen-part{min-height:unset;margin-bottom:0}.contact .item{display:flex;flex-direction:column;align-items:flex-end;padding:var(--spacing-2);gap:var(--spacing-2)}.contact .item img{width:40px}.contact a.item{margin:8px}.contact a.item:hover{font-weight:600}
