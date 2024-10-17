@@ -3,9 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://claire.dhenin.net/</loc>
-    <priority>1</priority>
   </url><url>
     <loc>https://claire.dhenin.net/mentionslegales/</loc>
-    <priority>0</priority>
   </url>
 </urlset>

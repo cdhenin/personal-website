@@ -177,10 +177,20 @@ section.right {
   display: block;
   content: '';
   height: 3px;
-  width: calc(2 * var(--decoration-width) - 17px);
   background-color: #156dbe;
   top: 50%;
   left: calc(-2 * var(--decoration-width));
+  transition: 1s all ease;
+}
+
+.screen-part .title:not(.active)::before,
+.screen-part .subtitle:not(.active)::before {
+  width: 0;
+}
+
+.screen-part .title.active::before,
+.screen-part .subtitle.active::before {
+  width: calc(2 * var(--decoration-width) - 17px);
 }
 
 .screen-part.right .title::before,
@@ -247,22 +257,13 @@ section.right {
 }
 
 
-.reveal {
-  position: relative;
+.toggle, .icon {
   opacity: 0;
   transition: 1s cubic-bezier(0.235, 0.615, 0.185, 0.995);
 }
 
-.reveal.left {
-  transform: translateX(-150px);
-}
 
-.reveal.right {
-  transform: translateX(150px);
-}
-
-.reveal.active {
-  transform: none;
+.toggle.active, .icon.active {
   opacity: 1;
 }
 
