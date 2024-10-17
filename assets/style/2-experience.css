@@ -79,7 +79,7 @@
   font-size: 1em;
 }
 
-
-.container.reveal.left:not(.active) {
-  transform: translateX(150px);
+.example {
+  height: 100px;
+  width: auto;
 }

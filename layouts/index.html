@@ -108,7 +108,7 @@
             <div id="about" class="anchor" aria-hidden="true" data-extra-space="100"></div>
             <div class="parallax bg-home screen-part"></div>
             <div class="content screen-part">
-                {{ partial "image.html" (dict "alt" "claire" "class" "reveal toggle" "src" "./images/claire.jpg") }}
+                {{ partial "image.html" (dict "alt" "claire" "class" "toggle" "src" "./images/claire.jpg") }}
 
                 <h2 class="title">À propos de moi</h2>
                 <div class="block">
@@ -144,8 +144,8 @@
                 <div class="parallax bg-home divider"></div>
                 <h2 class="title">Mon parcours</h2>
                 <div id="experience" class="anchor" aria-hidden="true"></div>
-                <div class="subtitle right reveal">Octobre 2021 – Aujourd’hui</div>
-                <div class="container right reveal subcontent">
+                <div class="subtitle right">Octobre 2021 – Aujourd’hui</div>
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "alt" "claire-dhenin logo" "class" "icon" "src" "./images/logo/company/claire-dhenin.png") }}
                         <div class="titles">
@@ -160,6 +160,20 @@
                     <p>
                         Création de sites internet vitrine (gîte locatif, psychologue, mairie...).
                     </p>
+                    <div class="flex">
+                        <a class="link" href="https://amelie.coppeauxpsychologue.fr" title="amelie.coppeauxpsychologue.fr" target="_blank"
+                        rel="noopener noreferrer">
+                        {{ partial "image.html" (dict "alt" "amelie.coppeauxpsychologue.fr" "class" "example" "src" "./images/sites/amelie-psychologue.png") }}
+                        </a>
+                        <a class="link" href="https://florentnaud.fr/" title="florentnaud.fr" target="_blank"
+                        rel="noopener noreferrer">
+                        {{ partial "image.html" (dict "alt" "florentnaud.fr" "class" "example" "src" "./images/sites/florent-amm.png") }}
+                        </a>
+                        <a class="link" href="https://gite-filons.com/" title="gite-filons.com" target="_blank"
+                        rel="noopener noreferrer">
+                        {{ partial "image.html" (dict "alt" "gite-filons.com" "class" "example" "src" "./images/sites/gite-filons.png") }}
+                        </a>
+                    </div>
                     <p>
                         Intervention sur des solutions web existantes, améliorations, refonte...
                     </p>
@@ -174,8 +188,38 @@
                         </li>
                     </ul>
                 </div>
-                <div class="subtitle reveal right ">Novembre 2021 – Juillet 2022</div>
-                <div class="container right reveal subcontent">
+                <div class="subtitle right">Juillet 2023 – Aujourd’hui</div>
+                <div class="container right subcontent">
+                    <div class="header">
+                        {{ partial "image.html" (dict "alt" "beta.gouv.fr logo" "class" "icon" "src" "./images/logo/company/betagouv.png") }}
+                        <div class="titles">
+                            <h3>Développeuse Full-Stack</h3>
+                            <h4>Free-lance - pour le projet Bénéfriches de l'<a class="link" target="_blank" rel="noopener noreferrer"
+                                href="https://ademe.fr/">ADEME</a> -
+
+                            <a class="link" target="_blank" rel="noopener noreferrer"
+                                href="https://beta.gouv.fr">beta.gouv.fr</a>
+                        
+                            </h4>
+                        </div>
+                    </div>
+                    <p>
+                        L'objectif du projet Bénéfriches est de fournir une solution numérique de calcul des impacts positifs de la reconversion de friches aux chargés d’opération d’aménagement pour favoriser la prise de décision (pour tout type de projet d’aménagement) et augmenter le nombre de reconversions 
+                    </p>
+                    
+                    <ul>
+                        <li><a class="link" href="https://github.com/incubateur-ademe/benefriches" target="_blank"
+                                rel="noopener noreferrer">Voir le code source</a>
+                        </li>
+                        <li>
+                            <a class="link" target="_blank" rel="noopener noreferrer"
+                                href="https://beta.gouv.fr/startups/benefriches.html">Voir la fiche produit</a>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="subtitle right ">Novembre 2021 – Juillet 2022</div>
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "maxW" 65 "alt" "lyanne logo" "class" "icon" "src" "./images/logo/company/lyanne.svg") }}
                         <div class="titles">
@@ -199,9 +243,9 @@
 
 
                 </div>
-                <div class="subtitle reveal right">Juillet 2019 – Juillet 2021 </div>
+                <div class="subtitle right">Juillet 2019 – Juillet 2021 </div>
 
-                <div class="container right reveal subcontent">
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "maxW" 65 "alt" "misakey logo" "class" "icon" "src" "./images/logo/company/misakey.svg") }}
                         <div class="titles">
@@ -238,9 +282,9 @@
                         savoir plus sur Misakey</a>
 
                 </div>
-                <div class="subtitle reveal right">Septembre 2017 – Juin 2019</div>
+                <div class="subtitle right">Septembre 2017 – Juin 2019</div>
 
-                <div class="container right reveal subcontent">
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "maxW" 65 "alt" "cybelangel logo" "class" "icon" "src" "./images/logo/company/cybelangel.jpg") }}
                         <div class="titles">
@@ -270,9 +314,9 @@
                         savoir plus sur Cybelangel</a>
 
                 </div>
-                <div class="subtitle reveal right">SEPTEMBRE 2012 - JUIN 2017</div>
+                <div class="subtitle right">SEPTEMBRE 2012 - JUIN 2017</div>
 
-                <div class="container right reveal subcontent">
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "maxW" 65 "alt" "ig2i logo" "class" "icon" "src" "./images/logo/company/ig2i.png") }}
                         <div class="titles">
@@ -297,9 +341,9 @@
                         savoir plus sur Centrale Lille IG2I</a>
 
                 </div>
-                <div class="subtitle reveal right">Février 2017 – Juillet 2017 </div>
+                <div class="subtitle right">Février 2017 – Juillet 2017 </div>
 
-                <div class="container right reveal subcontent">
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "maxW" 65 "alt" "jerevedunemaison logo" "class" "icon" "src" "./images/logo/company/jerevedunemaison.svg") }}
                         <div class="titles">
@@ -331,9 +375,9 @@
                     <a class="link" href="https://www.jerevedunemaison.com/" target="_blank"
                         rel="noopener noreferrer">En savoir plus sur Je rêve d’une maison</a>
                 </div>
-                <div class="subtitle reveal right">Septembre 2016 – Janvier 2017 </div>
+                <div class="subtitle right">Septembre 2016 – Janvier 2017 </div>
 
-                <div class="container right reveal subcontent">
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "maxW" 65 "alt" "ovh logo" "class" "icon" "src" "./images/logo/company/ovh.svg") }}
                         <div class="titles">
@@ -359,9 +403,9 @@
 
                 </div>
 
-                <div class="subtitle reveal right">Juillet 2015 – Janvier 2016 </div>
+                <div class="subtitle right">Juillet 2015 – Janvier 2016 </div>
 
-                <div class="container right reveal subcontent">
+                <div class="container right subcontent">
                     <div class="header">
                         {{ partial "image.html" (dict "maxW" 65 "alt" "ino logo" "class" "icon" "src" "./images/logo/company/ino.png") }}
                         <div class="titles">
