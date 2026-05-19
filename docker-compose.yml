@@ -1,9 +1,10 @@
 version: "3.9"
 services:
   server:
-    image: jakejarvis/hugo-extended:latest
-    ports:
-      - 1313:1313
+    image: hugomods/hugo:exts
+    command: server -D
     volumes:
       - ./:/src
-    command: server --disableFastRender --bind 0.0.0.0
+      - ~/hugo_cache:/tmp/hugo_cache
+    ports:
+      - 1313:1313

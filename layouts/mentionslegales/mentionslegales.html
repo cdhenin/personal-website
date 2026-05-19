@@ -11,7 +11,7 @@
    
     <link rel="canonical" href="https://claire.dhenin.net/mentionslegales" />
 
-    {{ $shoudServe := .Site.IsServer }}
+    {{ $shoudServe := hugo.IsServer }}
     {{ $main := resources.Get "style/0-main.css" }}
     {{ $navbar := resources.Get "style/0-navbar.css" }}
     

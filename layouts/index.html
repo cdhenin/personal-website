@@ -19,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
 
-    {{- $shoudServe := .Site.IsServer -}}
+    {{- $shoudServe := hugo.IsServer -}}
     {{- range $style := resources.Match "style/*.css" -}}
     {{ if $shoudServe }}
     <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
